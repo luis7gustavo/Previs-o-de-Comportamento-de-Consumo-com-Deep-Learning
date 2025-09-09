@@ -1,0 +1,24 @@
+# Project configuration
+paths:
+  raw_data: "data/raw/vendas_online.csv"
+  processed_data: "data/processed/vendas_preprocessed.csv"
+  models: "models/"
+  
+# Data preprocessing parameters
+preprocessing:
+  test_size: 0.2
+  validation_size: 0.2
+  sequence_length: 30
+  target_column: "vendas"
+  date_column: "data"
+
+# Model parameters
+model:
+  type: "lstm"
+  lstm_units: 128
+  dense_units: 64
+  dropout_rate: 0.2
+  epochs: 100
+  batch_size: 32
+  learning_rate: 0.001
+  patience: 15
